@@ -164,11 +164,11 @@ _Make a list of examples of how the class will behave in different situations._
 ``` python
 # _____UNIT TESTS____-> Todo()
 
-"""
-Instance of Todo() class initialises a task_name property
-"""
-task1 = Todo("Walk the dog")
-task1.task_name = "Walk the dog"
+# """
+# Instance of Todo() class initialises a task_name property
+# """
+# task1 = Todo("Walk the dog")
+# task1.task_name = "Walk the dog"
 
 # _____UNIT TESTS____-> DiaryEntry()
 """
