@@ -245,154 +245,154 @@ _Make a list of examples of how the class will behave in different situations._
 
 
 # _____UNIT TESTS____-> Mega_Diary()
-"""
-Instance of Mega_Diary() class initialises diary_entries, contact_list and todo_list properties as lists
-"""
-Sarahs_diary = Mega_Diary()
-Sarahs_diary.diary_entries = []
-Sarahs_diary.contact_list = []
-Sarahsdiary.todo_list = []
+# """
+# Instance of Mega_Diary() class initialises diary_entries, contact_list and todo_list properties as lists
+# """
+# Sarahs_diary = Mega_Diary()
+# Sarahs_diary.diary_entries = []
+# Sarahs_diary.contact_list = []
+# Sarahsdiary.todo_list = []
 
-"""
-Given a non-instance, add_diary_entry()
-Does not add to diary_entries list
-Raises error: can only add diary_entry instances to mega diary!
-"""
-Sarahs_diary = Mega_Diary()
-Sarahs_diary.add_diary_entry("This is not an instance")
-=> error
+# """
+# Given a non-instance, add_diary_entry()
+# Does not add to diary_entries list
+# Raises error: can only add diary_entry instances to mega diary!
+# """
+# Sarahs_diary = mega_diary()
+# Sarahs_diary.add_diary_entry("This is not an instance")
+# => error
 
-"""
-If diary_entries list is empty (none have been added), get_all_diary_entries()
-Raises error: "No diary entries found!"
-"""
-Sarahs_diary = Mega_Diary()
-Sarahs_diary.get_all_diary_entries()
-=> error!
+# """
+# If diary_entries list is empty (none have been added), get_all_diary_entries()
+# Raises error: "No diary entries found!"
+# """
+# Sarahs_diary = mega_diary()
+# Sarahs_diary.get_all_diary_entries()
+# => error!
 
-"""
-If diary_entries list is empty (none have been added), best_entry_to_read()
-Raises error: "No diary entries found!"
-"""
-Sarahs_diary = Mega_Diary()
-Sarahs_diary.gbest_entry_to_read()
-=> error!
+# """
+# If diary_entries list is empty (none have been added), best_entry_to_read()
+# Raises error: "No diary entries found!"
+# """
+# Sarahs_diary = mega_diary()
+# Sarahs_diary.gbest_entry_to_read()
+# => error!
 
-"""
-Given a non-instance of Todo(), add_to_do_task()
-Does not add the instance to todo_list and raises error: "Can only add Todo instances to Mega Diary!"
-"""
-Sarahs_diary = Mega_Diary()
-Sarahs_diary.add_to_do_task("This is not an instance")
-Sarahs_dairy.todo_list => error!
+# """
+# Given a non-instance of Todo(), add_to_do_task()
+# Does not add the instance to todo_list and raises error: "Can only add Todo instances to Mega Diary!"
+# """
+# Sarahs_diary = mega_diary()
+# Sarahs_diary.add_to_do_task("This is not an instance")
+# Sarahs_dairy.todo_list => error!
 
-"""
-If diary_entries list is empty, get_all_phone_numbers()
-Returns nothing, raises error: "No diary entries found!"
-"""
-Sarahs_diary = Mega_Diary()
-Sarahs_dairy.get_all_phone_numbers() => error!
+# """
+# If diary_entries list is empty, get_all_phone_numbers()
+# Returns nothing, raises error: "No diary entries found!"
+# """
+# Sarahs_diary = mega_diary()
+# Sarahs_dairy.get_all_phone_numbers() => error!
 
 # _____INTEGRATION TESTS_____
 
 # EXAMPLE
 
-"""
-Given an instance of Diary_Entry(), add_diary_entry()
-Adds the instance to diary_entries list
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-Sarahs_diary.add_diary_entry(entry1)
-=> Sarahs_diary.diary_entries = [entry1]
+# """
+# Given an instance of Diary_Entry(), add_diary_entry()
+# Adds the instance to diary_entries list
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# Sarahs_diary.add_diary_entry(entry1)
+# => Sarahs_diary.diary_entries = [entry1]
 
-"""
-Given that diary_entries is not empty, get_all_diary_entries()
-Returns diary_entries list, with each entry formatted into "Title: contents" format
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-Sarahs_diary.get_all_diary_entries()
-=> ["Title1: Contents1"]
+# """
+# Given that diary_entries is not empty, get_all_diary_entries()
+# Returns diary_entries list, with each entry formatted into "Title: contents" format
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# Sarahs_diary.get_all_diary_entries()
+# => ["Title1: Contents1"]
 
-"""
-Given diary_entries list is not empty, and given a wpm and mins, best_entry_to_read()
-Returns the longest entry readable within the parameters given, formatted
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-entry2 = Diary_Entry("Title2", "Contents2 is longer")
-Sarahs_diary.add_diary_entry(entry1)
-Sarahs_diary.add_diary_entry(entry2)
-Sarahs_diary.best_entry_to_read(2, 2)
-=> "Title 2: Contents2 is longer"
+# """
+# Given diary_entries list is not empty, and given a wpm and mins, best_entry_to_read()
+# Returns the longest entry readable within the parameters given, formatted
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry2 = Diary_Entry("Title2", "Contents2 is longer")
+# Sarahs_diary.add_diary_entry(entry1)
+# Sarahs_diary.add_diary_entry(entry2)
+# Sarahs_diary.best_entry_to_read(2, 2)
+# => "Title 2: Contents2 is longer"
 
-"""
-Given a wpm of 0, best_entry_to_read()
-Raises error "wpm must be an integer greater than 0!"
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-entry2 = Diary_Entry("Title2", "Contents2 is longer")
-Sarahs_diary.add_diary_entry(entry1)
-Sarahs_diary.add_diary_entry(entry2)
-Sarahs_diary.best_entry_to_read(1.5, 2)
-=> error!
+# """
+# Given a wpm of 0, best_entry_to_read()
+# Raises error "wpm must be an integer greater than 0!"
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry2 = Diary_Entry("Title2", "Contents2 is longer")
+# Sarahs_diary.add_diary_entry(entry1)
+# Sarahs_diary.add_diary_entry(entry2)
+# Sarahs_diary.best_entry_to_read(0, 2)
+# => error!
 
-"""
-Given a mins of 0, best_entry_to_read()
-Raises error "You have no time to read!"
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-entry2 = Diary_Entry("Title2", "Contents2 is longer")
-Sarahs_diary.add_diary_entry(entry1)
-Sarahs_diary.add_diary_entry(entry2)
-Sarahs_diary.best_entry_to_read(2, 0)
-=> error!
+# """
+# Given wpm not as an integer, best_entry_to_read()
+# Raises error "You have no time to read!"
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry2 = Diary_Entry("Title2", "Contents2 is longer")
+# Sarahs_diary.add_diary_entry(entry1)
+# Sarahs_diary.add_diary_entry(entry2)
+# Sarahs_diary.best_entry_to_read(1.5, 2)
+# => error!
 
-"""
-Given a mins of 0, best_entry_to_read()
-Raises error "You have no time to read!"
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-entry2 = Diary_Entry("Title2", "Contents2 is longer")
-Sarahs_diary.add_diary_entry(entry1)
-Sarahs_diary.add_diary_entry(entry2)
-Sarahs_diary.best_entry_to_read(2, 0)
-=> error!
+# """
+# Given a mins of 0, best_entry_to_read()
+# Raises error "You have no time to read!"
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry2 = Diary_Entry("Title2", "Contents2 is longer")
+# Sarahs_diary.add_diary_entry(entry1)
+# Sarahs_diary.add_diary_entry(entry2)
+# Sarahs_diary.best_entry_to_read(2, 0)
+# => error!
 
-"""
-Given an instance of Todo(), add_to_do_task()
-Adds the instance to todo_list
-"""
-Sarahs_diary = Mega_Diary()
-task1 = Todo("Walk the dog")
-Sarahs_diary.add_to_do_task(task1)
-Sarahs_dairy.todo_list => [task1]
+# """
+# Given an instance of Todo(), add_to_do_task()
+# Adds the instance to todo_list
+# """
+# Sarahs_diary = mega_diary()
+# task1 = Todo("Walk the dog")
+# Sarahs_diary.add_to_do_task(task1)
+# Sarahs_dairy.todo_list => [task1]
 
-"""
-Given that diary_entries is not empty, get_all_phone_numbers()
-Returns list of all phone numbers mentioned in all diary entries (no duplicate numbers)
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1 07383474565")
-entry2 = Diary_Entry("Title2", "Contents2 07191222390")
-Sarahs_diary.add_diary_entry(entry1)
-Sarahs_diary.add_diary_entry(entry2)
-Sarahs_diary.get_all_phone_numbers() => ["07383474565", "07191222390"]
+# """
+# Given that diary_entries is not empty, get_all_phone_numbers()
+# Returns list of all phone numbers mentioned in all diary entries (no duplicate numbers)
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1 07383474565")
+# entry2 = Diary_Entry("Title2", "Contents2 07191222390")
+# Sarahs_diary.add_diary_entry(entry1)
+# Sarahs_diary.add_diary_entry(entry2)
+# Sarahs_diary.get_all_phone_numbers() => ["07383474565", "07191222390"]
 
-"""
-Given that diary_entries is not empty, but there are no phone numbers in diary_entries, get_all_phone_numbers()
-Returns default "No phone numbers found!"
-"""
-Sarahs_diary = Mega_Diary()
-entry1 = Diary_Entry("Title1", "Contents1")
-entry2 = Diary_Entry("Title2", "Contents2")
-Sarahs_diary.add_diary_entry(entry1)
-Sarahs_diary.add_diary_entry(entry2)
-Sarahs_diary.get_all_phone_numbers() => "No phone numbers found!"
+# """
+# Given that diary_entries is not empty, but there are no phone numbers in diary_entries, get_all_phone_numbers()
+# Returns default "No phone numbers found!"
+# """
+# Sarahs_diary = mega_diary()
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry2 = Diary_Entry("Title2", "Contents2")
+# Sarahs_diary.add_diary_entry(entry1)
+# Sarahs_diary.add_diary_entry(entry2)
+# Sarahs_diary.get_all_phone_numbers() => "No phone numbers found!"
 
 
 _Encode each example as a test. You can add to the above list as you go._
