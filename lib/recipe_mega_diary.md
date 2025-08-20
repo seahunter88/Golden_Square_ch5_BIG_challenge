@@ -171,77 +171,77 @@ _Make a list of examples of how the class will behave in different situations._
 # task1.task_name = "Walk the dog"
 
 # _____UNIT TESTS____-> DiaryEntry()
-"""
-Instance of Diary_Entry() class initialises title and contents properties
-"""
-entry1 = Diary_Entry("Title1", "Contents1")
-entry1.title = "Title1"
-entry1.contents = "Contents1"
+# """
+# Instance of Diary_Entry() class initialises title and contents properties
+# """
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry1.title = "Title1"
+# entry1.contents = "Contents1"
 
-"""
-Given a blank string as title, 
-Raises error: "Diary Entries must have a title and contents"
-"""
-entry1 = Diary_Entry("", "Contents1")
-=> error
+# """
+# Given a blank string as title, 
+# Raises error: "Diary Entries must have a title and contents"
+# """
+# entry1 = Diary_Entry("", "Contents1")
+# => error
 
-"""
-Given a blank string as contents, 
-Raises error: "Diary Entries must have a title and contents"
-"""
-entry1 = Diary_Entry("Title1", "")
-=> error
+# """
+# Given a blank string as contents, 
+# Raises error: "Diary Entries must have a title and contents"
+# """
+# entry1 = Diary_Entry("Title1", "")
+# => error
 
-"""
-Given blank strings as title and contents, 
-Raises error: "Diary Entries must have a title and contents"
-"""
-entry1 = Diary_Entry("", "")
-=> error
+# """
+# Given blank strings as title and contents, 
+# Raises error: "Diary Entries must have a title and contents"
+# """
+# entry1 = Diary_Entry("", "")
+# => error
 
-"""
-Given non-string as title,
-Raises error: "Title and contents must be strings"
-"""
-entry1 = Diary_Entry(1234, "Contents1")
-=> error
+# """
+# Given non-string as title,
+# Raises error: "Title and contents must be strings"
+# """
+# entry1 = Diary_Entry(1234, "Contents1")
+# => error
 
-"""
-Given non-string as contents,
-Raises error: "Title and contents must be strings"
-"""
-entry1 = Diary_Entry("Title1", 1234)
-=> error
+# """
+# Given non-string as contents,
+# Raises error: "Title and contents must be strings"
+# """
+# entry1 = Diary_Entry("Title1", 1234)
+# => error
 
-"""
-Given an instance has been created, format()
-Returns formatted diary entry
-"""
-entry1 = Diary_Entry("Title1", "Contents1")
-entry1.format() => "Title1: Contents1"
+# """
+# Given an instance has been created, format()
+# Returns formatted diary entry
+# """
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry1.format() => "Title1: Contents1"
 
-"""
-Given an instance has been created, count_words()
-Returns length of contents of instance in words 
-"""
-entry1 = Diary_Entry("Title1", "Contents1")
-entry1.count_words() => 1
+# """
+# Given an instance has been created, count_words()
+# Returns length of contents of instance in words 
+# """
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry1.count_words() => 1
 
-"""
-Given an instance has been created,
-given a wpm, reading_time()
-Returns time in mins needed to read contents of instance at given wpm speed
-"""
-entry1 = Diary_Entry("Title1", "Contents1")
-entry1.reading_time(1) => 1
+# """
+# Given an instance has been created,
+# given a wpm, reading_time()
+# Returns time in mins needed to read contents of instance at given wpm speed
+# """
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry1.reading_time(1) => 1
 
-"""
-Given an instance has been created,
-given a wpm of 0, reading_time()
-Raises error: "wpm can't be 0!"
-"""
-entry1 = Diary_Entry("Title1", "Contents1")
-entry1.reading_time(0) => error!
+# """
+# Given an instance has been created,
+# given a wpm of 0, reading_time()
+# Raises error: "wpm can't be 0!"
+# """
+# entry1 = Diary_Entry("Title1", "Contents1")
+# entry1.reading_time(0) => error!
 
 
 # _____UNIT TESTS____-> Mega_Diary()
